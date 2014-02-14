@@ -48,10 +48,17 @@
           </a>
           <a class="brand" href="#">StaticCms</a>
           <div class="container-fluid nav-collapse">
-            <ul class="nav">
+            <!-- <ul class="nav">
               <li><%= link_to "Link1", "/path1"  %></li>
               <li><%= link_to "Link2", "/path2"  %></li>
               <li><%= link_to "Link3", "/path3"  %></li>
+            </ul> -->
+            <ul class="nav pull-right">
+              <%if user_signed_in?%>
+                <li><%=link_to "Logout",destroy_user_session_path,method: :delete%></li>
+              <%else%>
+                 <li><%=link_to "Login",new_user_session_path%></li>
+              <%end%>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
