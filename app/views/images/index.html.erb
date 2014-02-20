@@ -1,0 +1,8 @@
+<%= form_tag({:controller => "images", :action => "upload_image"}, :html => { :multipart => true }) do %>
+  <%= label_tag :title %>
+  <%= text_field_tag  "image[:title]" %>
+  <%= label_tag :caption %>
+  <%= text_field_tag "image[:caption]" %>  
+  <%= file_field_tag "image[:avatar]" %>
+  <%= submit_tag 'Upload' %>
+<% end %>

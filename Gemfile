@@ -42,6 +42,7 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 gem 'devise'
 
 gem "paperclip", "~> 3.0" #for image upload
+gem "debugger", "~> 1.6.5"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
