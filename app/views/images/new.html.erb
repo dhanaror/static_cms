@@ -1,0 +1,12 @@
+<%= form_tag(@image,:multipart => true ) do %>
+  <%= label_tag :title %>
+  <%= text_field  "image","title" %>
+  <%= label_tag :caption %>
+  <%= text_field "image","caption" %>  
+  <%= file_field "image","avatar" %>
+  <%= submit_tag 'Upload' %>
+<%end%>
+
+<!-- 12bit018
+
+15/05/95 -->
