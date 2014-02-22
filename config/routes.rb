@@ -9,10 +9,6 @@ StaticCms::Application.routes.draw do
    resources 'static_pages'
    #resources 'images'
    resources :images do
-    collection do
-      post 'upload_image'
-      get 'list_image'
-    end
    end
 
   # Example of regular route:
