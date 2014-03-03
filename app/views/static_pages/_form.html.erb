@@ -1,7 +1,12 @@
-<textarea id="elm1" name="area"></textarea>
+<%=form_for @static_page do |f|%>
+  <%=f.text_field :title%>
+  <%=f.text_area :description,:id=>"tiny_editor"%>
+  <%=f.submit "Make"%>
+<!-- <textarea id="elm1" name="area"></textarea> -->
+<%end%>
 <script type="text/javascript">
 tinymce.init({
-    selector: "textarea#elm1",
+    selector: "textarea#tiny_editor",
     theme: "modern",
     width: 700,
     height: 300,
