@@ -1,6 +1,21 @@
 <%=form_for @static_page do |f|%>
-  <%=f.text_field :title%>
-  <%=f.text_area :description,:id=>"tiny_editor"%>
+  <div class="form_element">
+    <%=f.text_field :title%>
+  </div>
+  <div class="form_element">
+    <div class="gallery_box"> 
+      <ul class="image_box">
+        <li>
+           Add<br/>
+           Image<br/>
+           Here
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="form_element">
+    <%=f.text_area :description,:id=>"tiny_editor"%>
+  </div>
   <%=f.submit "Make"%>
 <!-- <textarea id="elm1" name="area"></textarea> -->
 <%end%>

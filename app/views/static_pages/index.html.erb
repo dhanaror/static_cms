@@ -1,1 +1,4 @@
+<%@static_pages.each do |static_page|%>
+  <%=link_to static_page.title,static_page_path(static_page)%><br/>
+<%end%>
 <%=link_to "New",new_static_page_path%>

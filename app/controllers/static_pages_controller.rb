@@ -1,7 +1,9 @@
 class StaticPagesController < ApplicationController
 	before_filter :set_static_page,:only=>[:show,:edit,:update,:destroy]
 	before_filter :login_filter
+
 	def index
+		@static_pages = StaticPage.all
 	end
 
 	def show
