@@ -12,15 +12,21 @@
  *= require_tree .
  */
 
-ul {
+.gallery_box ul {
     list-style: none;
     padding:0;
     margin:0;
 }
 .form_element{padding-top: 10px;}
-.gallery_box{width:700px;border:2px groove rgb(158, 158, 158);}
+.gallery_box{
+	width:690px;
+	border:6px groove rgb(158, 158, 158);
+}
 .image_box li{
-	width:70px;
+	width:91px;
+	height:79px;
 	border:1px groove rgb(158, 158, 158);
-	margin-top:2px;
+	margin:10px 6px;
+	text-align:center;
+	display:-moz-stack;
 }}
