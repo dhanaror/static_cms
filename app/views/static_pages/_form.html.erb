@@ -2,8 +2,9 @@
   <div class="form_element">
     <%=f.text_field :title%>
   </div>
-  <div class="form_element">
-    <div class="gallery_box"> 
+  <div class="form_element default">
+    <button class="prev"><<</button>
+    <div class="gallery_box jCarouselLite">
       <ul class="image_box">
         <li>
            Add<br/>
@@ -15,8 +16,40 @@
            Image<br/>
            Here
         </li>
+        <li>
+           Add<br/>
+           Image<br/>
+           Here
+        </li>
+        <li>
+           Add<br/>
+           Image<br/>
+           Here
+        </li>
+        <li>
+           Add<br/>
+           Image<br/>
+           Here
+        </li>
+        <li>
+           Add<br/>
+           Image<br/>
+           Here
+        </li>
+        <li>
+           Add<br/>
+           Image<br/>
+           Here
+        </li>
+        <li>
+           Add<br/>
+           Image<br/>
+           Here
+        </li>
       </ul>
+      <div class="clear"></div>
     </div>
+    <button class="next">>></button>
   </div>
   <div class="form_element">
     <%=f.text_area :description,:id=>"tiny_editor"%>
@@ -47,4 +80,12 @@ tinymce.init({
         {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
     ]
  }); 
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".default .jCarouselLite").jCarouselLite({
+    btnNext: ".default .next",
+    btnPrev: ".default .prev"
+    });
+  })
 </script>
