@@ -7,44 +7,10 @@
     <div class="gallery_box jCarouselLite">
       <ul class="image_box">
         <li>
-           Add<br/>
-           Image<br/>
-           Here
+           <%=image_tag "/assets/add_logo.jpeg",:class=>"add_gallery_image"%>
         </li>
         <li>
-           Add<br/>
-           Image<br/>
-           Here
-        </li>
-        <li>
-           Add<br/>
-           Image<br/>
-           Here
-        </li>
-        <li>
-           Add<br/>
-           Image<br/>
-           Here
-        </li>
-        <li>
-           Add<br/>
-           Image<br/>
-           Here
-        </li>
-        <li>
-           Add<br/>
-           Image<br/>
-           Here
-        </li>
-        <li>
-           Add<br/>
-           Image<br/>
-           Here
-        </li>
-        <li>
-           Add<br/>
-           Image<br/>
-           Here
+           <%=image_tag "/assets/add_logo.jpeg"%>
         </li>
       </ul>
       <div class="clear"></div>
@@ -88,4 +54,9 @@ tinymce.init({
     btnPrev: ".default .prev"
     });
   })
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".add_gallery_image").colorbox();
+  });
 </script>
