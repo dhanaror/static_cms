@@ -6,7 +6,9 @@ StaticCms::Application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'home#index'
 
-   resources 'static_pages'
+   resources :static_pages do
+    get 'images_list',:on=>:collection
+   end
    #resources 'images'
    resources :images do
    end

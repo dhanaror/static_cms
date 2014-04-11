@@ -28,6 +28,11 @@ class StaticPagesController < ApplicationController
 	def destroy
 	end
 
+	def images_list
+		@images = Image.all
+		render :layout=>false
+	end
+
     private
 	def static_page_params
 		params.require(:static_page).permit(:title,:description)

@@ -7,7 +7,7 @@
     <div class="gallery_box jCarouselLite">
       <ul class="image_box">
         <li>
-           <%=image_tag "/assets/add_logo.jpeg",:class=>"add_gallery_image"%>
+           <%=image_tag "/assets/add_logo.jpeg",:class=>"add_gallery_image",:href=>images_list_static_pages_path%>
         </li>
         <li>
            <%=image_tag "/assets/add_logo.jpeg"%>
@@ -23,6 +23,23 @@
   <%=f.submit "Make"%>
 <!-- <textarea id="elm1" name="area"></textarea> -->
 <%end%>
+<script type="text/javascript">
+  $(document).ready(function(){ 
+    $(".default .jCarouselLite").jCarouselLite({
+    btnNext: ".default .next",
+    btnPrev: ".default .prev"
+    });
+  })
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".add_gallery_image").colorbox({
+      href:$(this).attr('href'),
+      width:"1000px",
+      height:"500px"
+      });
+  });
+</script>
 <script type="text/javascript">
 tinymce.init({
     selector: "textarea#tiny_editor",
@@ -46,17 +63,4 @@ tinymce.init({
         {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
     ]
  }); 
-</script>
-<script type="text/javascript">
-  $(document).ready(function(){
-    $(".default .jCarouselLite").jCarouselLite({
-    btnNext: ".default .next",
-    btnPrev: ".default .prev"
-    });
-  })
-</script>
-<script type="text/javascript">
-  $(document).ready(function(){
-    $(".add_gallery_image").colorbox();
-  });
 </script>
